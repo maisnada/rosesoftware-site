@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    
+    "start":"node index.js"
   },
   "author": "Marcelo Palmito Moreno",
   "license": "ISC"
