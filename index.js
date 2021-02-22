@@ -1,10 +1,12 @@
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
+const express = require('express');
+const app = express();
+const PORT = 3000;
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'content-type': 'text/html' })
-  fs.createReadStream(path.join(__dirname, 'index.html')).pipe(res)
-})
 
-server.listen(process.env.PORT || 3000)
+app.use('/', express.static(__dirname + '/'));
+
+app.get('/', (req, res) => {
+    res.sendFile('./index.html', { root: __dirname });
+});
+
+app.listen(PORT, () => console.log(`opa!!: ${PORT}`));

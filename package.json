@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start":"node index.js"
+    "start": "node index.js"
   },
   "author": "Marcelo Palmito Moreno",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
